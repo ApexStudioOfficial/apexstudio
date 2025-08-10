@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Studio: Your Digital Workspace</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Comfortaa -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Material Symbols Outlined font for icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        body {
+            font-family: 'Comfortaa', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+
+    <!-- Top Navigation Bar - Now outlined -->
+    <header class="bg-gray-100 shadow-sm border-b border-gray-300">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo/Site Title -->
+            <a href="#" class="text-xl font-bold text-gray-800">Apex Studio</a>
+            
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex space-x-6">
+                <!-- Added IDs to navigation links for JavaScript handling -->
+                <a href="#home" id="nav-home" class="text-gray-600 hover:text-blue-500 transition-colors">Home</a>
+                <a href="#about" id="nav-about" class="text-gray-600 hover:text-blue-500 transition-colors">About</a>
+                <!-- NEW Pricing link with an ID -->
+                <a href="#pricing" id="nav-pricing" class="text-gray-600 hover:text-blue-500 transition-colors">Pricing</a>
+                <a href="#contact" id="nav-contact" class="text-gray-600 hover:text-blue-500 transition-colors">Contact</a>
+            </nav>
+            
+            <!-- Mobile Menu Button (Hidden on larger screens) -->
+            <button class="md:hidden text-gray-600 hover:text-blue-500 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Wrapper - Holds all pages -->
+    <div id="content-wrapper" class="flex-grow">
+        <!-- Home Page Section (Initially visible) -->
+        <div id="home-page">
+            <main class="container mx-auto p-8">
+                <!-- Hero Section with left-aligned text and a new text element instead of an image -->
+                <div class="flex flex-col md:flex-row items-center justify-between gap-8 mb-16">
+                    <!-- Left-aligned Text Content -->
+                    <div class="md:w-1/2 text-left">
+                        <!-- Small Container for students and teachers - Now outlined -->
+                        <div class="inline-block bg-transparent border border-blue-500 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full mb-2">Students and Teachers</div>
+                        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900">Save <span class="text-yellow-400 text-6xl">50%</span> on Apex Studio.</h1>
+                        <!-- Small text matching the title -->
+                        <p class="text-xl text-gray-600 mt-2">Unlock your potential with our special discount.</p>
+                        <p class="mt-4 text-lg text-gray-600 max-w-lg">Create amazing documents, manage powerful spreadsheets, and build captivating presentations with our all-in-one suite. Apex Studio is your digital workspace, ready for anything.</p>
+                        
+                        <!-- Buttons for Pricing and About Us - Now outlined -->
+                        <div class="mt-6 flex space-x-4">
+                            <!-- Pricing Button -->
+                            <a href="#pricing" id="home-pricing-button" class="inline-block bg-blue-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-600 transition-colors">
+                                View Plans
+                            </a>
+                            <!-- NEW About Us Button -->
+                            <a href="#about" id="home-about-button" class="inline-block bg-transparent text-blue-500 border border-blue-500 font-semibold py-3 px-6 rounded-lg hover:bg-blue-50 transition-colors">
+                                About Us
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Text element replacing the image -->
+                    <div class="md:w-1/2 w-full h-full mt-8 md:mt-0 flex items-center justify-center">
+                        <span class="text-gray-400 text-8xl md:text-9xl font-bold">(¬‿¬)</span>
+                    </div>
+                </div>
+
+                <!-- Popular Plans Section -->
+                <section id="popular-plans" class="py-12">
+                    <div class="text-center">
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">Popular Plans</h2>
+                        <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                            Get started with our most-chosen plans.
+                        </p>
+                    </div>
+                    <!-- Updated the grid layout to accommodate three cards -->
+                    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Pricing Card 1: Starter - Now outlined -->
+                        <div class="flex flex-col bg-transparent border border-gray-300 p-8 rounded-xl shadow-sm text-center transition-shadow duration-300 hover:shadow-md">
+                            <h3 class="text-2xl font-bold text-gray-900">Starter</h3>
+                            <p class="text-gray-500 mt-2">Perfect for small teams</p>
+                            <div class="my-6">
+                                <p class="text-5xl font-extrabold text-gray-900">$19<span class="text-lg font-medium text-gray-500">/mo</span></p>
+                            </div>
+                            <ul class="space-y-4 text-gray-600 text-left flex-grow">
+                                <li class="flex items-start">
+                                    <span class="material-symbols-outlined text-green-500 mr-2">check_circle</span>
+                                    <span>Up to 5 users</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="material-symbols-outlined text-green-500 mr-2">check_circle</span>
+                                    <span>10 projects</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="material-symbols-outlined text-green-500 mr-2">check_circle</span>
+                                    <span>Basic task management</span>
+                                </li>
+                            </ul>
+                            <a href="#pricing" class="mt-8 block bg-blue-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-600 transition-colors">Get Started</a>
+                        </div>
+                        <!-- Pricing Card 2: Pro (Most popular) - Now outlined -->
+                        <div class="flex flex-col bg-transparent border border-blue-500 text-blue-500 p-8 rounded-xl shadow-md text-center relative">
+                            <span class="absolute top-0 right-0 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-bl-lg">Most Popular</span>
+                            <h3 class="text-2xl font-bold">Pro</h3>
+                            <p class="mt-2 opacity-80">For growing teams and businesses</p>
+                            <div class="my-6">
+                                <p class="text-5xl font-extrabold">$49<span class="text-lg font-medium opacity-80">/mo</span></p>
+                            </div>
+                            <ul class="space-y-4 text-left flex-grow">
+                                <li class="flex items-start">
+                                    <span class="material-symbols-outlined text-blue-500 mr-2">check_circle</span>
+                                    <span>Unlimited users</span>
+                                    </li>
+                                <li class="flex items-start">
+                                    <span class="material-symbols-outlined text-blue-500 mr-2">check_circle</span>
+                                    <span>Unlimited projects</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="material-symbols-outlined text-blue-500 mr-2">check_circle</span>
+                                    <span>Advanced analytics</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="material-symbols-outlined text-blue-500 mr-2">check_circle</span>
+                                    <span>24/7 priority support</span>
+                                </li>
+                            </ul>
+                            <a href="#" class="mt-8 block bg-white border border-blue-500 text-blue-500 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">Get Started</a>
+                        </div>
+                        <!-- Pricing Card 3: Enterprise - Now outlined -->
+                        <div class="flex flex-col bg-transparent border border-gray-300 p-8 rounded-xl shadow-sm text-center transition-shadow duration-300 hover:shadow-md">
+                            <h3 class="text-2xl font-bold text-gray-900">Enterprise</h3>
+                            <p class="text-gray-500 mt-2">For large organizations</p>
+                            <div class="my-6">
+                                <p class="text-5xl font-extrabold text-gray-900">Contact Us</p>
+                            </div>
+                            <ul class="space-y-4 text-gray-600 text-left flex-grow">
+                                <li class="flex items-start">
+                                    <span class="material-symbols-outlined text-green-500 mr-2">check_circle</span>
+                                    <span>Unlimited everything</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="material-symbols-outlined text-green-500 mr-2">check_circle</span>
+                                    <span>Dedicated account manager</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="material-symbols-outlined text-green-500 mr-2">check_circle</span>
+                                    <span>Custom integrations</span>
+                                    </li>
+                            </ul>
+                            <a href="#pricing" class="mt-8 block bg-blue-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-600 transition-colors">Contact Sales</a>
+                        </div>
+                    </div>
+                    <!-- New div for the "Show More" button - Now outlined -->
+                    <div class="mt-8 text-center">
+                        <a href="#pricing" class="inline-block bg-transparent border border-blue-500 text-blue-500 font-semibold py-3 px-6 rounded-lg hover:bg-blue-50 transition-colors">Show More</a>
+                    </div>
+                </section>
+            </main>
+        </div>
+        
+        <!-- About Page Section (Initially hidden) -->
+        <div id="about-page" class="hidden">
+            <main class="container mx-auto p-8">
+                <h1 class="text-4xl font-extrabold text-center text-gray-900">About Us</h1>
+                <p class="mt-4 text-lg text-center text-gray-600">Learn more about our company and what we do.</p>
+            </main>
+        </div>
+        
+        <!-- Contact Page Section (Initially hidden) -->
+        <div id="contact-page" class="hidden">
+            <main class="container mx-auto p-8">
+                <h1 class="text-4xl font-extrabold text-center text-gray-900">Contact Us</h1>
+                <p class="mt-4 text-lg text-center text-gray-600">Get in touch with us to learn more.</p>
+            </main>
+        </div>
+
+        <!-- Pricing Page Section (Initially hidden) -->
+        <div id="pricing-page" class="hidden">
+            <main class="container mx-auto py-12 px-4">
+                <div class="text-center">
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900">Simple & Transparent Pricing</h1>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                        Choose the plan that fits your team's needs. All plans include a 14-day free trial, no credit card required.
+                    </p>
+                </div>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Pricing Card 1: Starter - Now outlined -->
+                    <div class="flex flex-col bg-transparent border border-gray-300 p-8 rounded-xl shadow-sm text-center transition-shadow duration-300 hover:shadow-md">
+                        <h3 class="text-2xl font-bold text-gray-900">Starter</h3>
+                        <p class="text-gray-500 mt-2">Perfect for small teams</p>
+                        <div class="my-6">
+                            <p class="text-5xl font-extrabold text-gray-900">$19<span class="text-lg font-medium text-gray-500">/mo</span></p>
+                        </div>
+                        <ul class="space-y-4 text-gray-600 text-left flex-grow">
+                            <li class="flex items-start">
+                                <span class="material-symbols-outlined text-green-500 mr-2">check_circle</span>
+                                <span>Up to 5 users</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="material-symbols-outlined text-green-500 mr-2">check_circle</span>
+                                <span>10 projects</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="material-symbols-outlined text-green-500 mr-2">check_circle</span>
+                                <span>Basic task management</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="material-symbols-outlined text-gray-400 mr-2">close</span>
+                                <span>Advanced analytics</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="mt-8 block bg-blue-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-600 transition-colors">Get Started</a>
+                    </div>
+                    <!-- Pricing Card 2: Pro (Most popular) - Now outlined -->
+                    <div class="flex flex-col bg-transparent border border-blue-500 text-blue-500 p-8 rounded-xl shadow-md text-center relative">
+                        <span class="absolute top-0 right-0 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-bl-lg">Most Popular</span>
+                        <h3 class="text-2xl font-bold">Pro</h3>
+                        <p class="mt-2 opacity-80">For growing teams and businesses</p>
+                        <div class="my-6">
+                            <p class="text-5xl font-extrabold">$49<span class="text-lg font-medium opacity-80">/mo</span></p>
+                        </div>
+                        <ul class="space-y-4 text-left flex-grow">
+                            <li class="flex items-start">
+                                <span class="material-symbols-outlined text-blue-500 mr-2">check_circle</span>
+                                <span>Unlimited users</span>
+                                </li>
+                            <li class="flex items-start">
+                                <span class="material-symbols-outlined text-blue-500 mr-2">check_circle</span>
+                                <span>Unlimited projects</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="material-symbols-outlined text-blue-500 mr-2">check_circle</span>
+                                <span>Advanced analytics</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="material-symbols-outlined text-blue-500 mr-2">check_circle</span>
+                                <span>24/7 priority support</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="mt-8 block bg-white border border-blue-500 text-blue-500 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">Get Started</a>
+                    </div>
+                    <!-- Pricing Card 3: Enterprise - Now outlined -->
+                    <div class="flex flex-col bg-transparent border border-gray-300 p-8 rounded-xl shadow-sm text-center transition-shadow duration-300 hover:shadow-md">
+                        <h3 class="text-2xl font-bold text-gray-900">Enterprise</h3>
+                        <p class="text-gray-500 mt-2">For large organizations</p>
+                        <div class="my-6">
+                            <p class="text-5xl font-extrabold text-gray-900">Contact Us</p>
+                        </div>
+                        <ul class="space-y-4 text-gray-600 text-left flex-grow">
+                            <li class="flex items-start">
+                                <span class="material-symbols-outlined text-green-500 mr-2">check_circle</span>
+                                <span>Unlimited everything</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="material-symbols-outlined text-green-500 mr-2">check_circle</span>
+                                <span>Dedicated account manager</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="material-symbols-outlined text-green-500 mr-2">check_circle</span>
+                                <span>Custom integrations</span>
+                                </li>
+                        </ul>
+                        <a href="#pricing" class="mt-8 block bg-blue-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-600 transition-colors">Contact Sales</a>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">&copy; 2024 Apex Studio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Page Switching -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const homePage = document.getElementById('home-page');
+            const aboutPage = document.getElementById('about-page');
+            const contactPage = document.getElementById('contact-page');
+            const pricingPage = document.getElementById('pricing-page');
+
+            const navHome = document.getElementById('nav-home');
+            const navAbout = document.getElementById('nav-about');
+            const navContact = document.getElementById('nav-contact');
+            const navPricing = document.getElementById('nav-pricing');
+            const homePricingButton = document.getElementById('home-pricing-button');
+            const homeAboutButton = document.getElementById('home-about-button');
+
+            // Function to show a page and hide others
+            const showPage = (pageToShow) => {
+                const allPages = [homePage, aboutPage, contactPage, pricingPage];
+                allPages.forEach(page => {
+                    if (page === pageToShow) {
+                        page.classList.remove('hidden');
+                    } else {
+                        page.classList.add('hidden');
+                    }
+                });
+            };
+
+            // Event listeners for the navigation links
+            navHome.addEventListener('click', (event) => {
+                event.preventDefault(); 
+                showPage(homePage);
+            });
+
+            navAbout.addEventListener('click', (event) => {
+                event.preventDefault();
+                showPage(aboutPage);
+            });
+            
+            navContact.addEventListener('click', (event) => {
+                event.preventDefault();
+                showPage(contactPage);
+            });
+            
+            // Event listener for the "Pricing" nav link
+            navPricing.addEventListener('click', (event) => {
+                event.preventDefault();
+                showPage(pricingPage);
+            });
+
+            // Event listeners for the buttons on the home page
+            homePricingButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                showPage(pricingPage);
+            });
+            
+            homeAboutButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                showPage(aboutPage);
+            });
+            
+            // Initial state: show the home page
+            showPage(homePage);
+        });
+    </script>
+</body>
+</html>
